@@ -5,12 +5,6 @@ from time import sleep
 import numpy as np
 import cv2
 
-#camera setting
-    camera = picamera.PiCamer()
-    camera.resolution = (320, 240)
-    camera.framerate = 24
-    time.sleep(2)
-    
 
 while True:
     #camera setting
