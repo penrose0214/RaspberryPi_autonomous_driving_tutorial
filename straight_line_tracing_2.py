@@ -10,7 +10,7 @@ while True:
     #camera setting
     camera = picamera.PiCamera()
     camera.resolution = (320, 240)
-    camera.framerate = 24
+    camera.framerate = 24   #24 FPS
     time.sleep(2)
     
     #capture from live Picamera, can scale to gray-scale

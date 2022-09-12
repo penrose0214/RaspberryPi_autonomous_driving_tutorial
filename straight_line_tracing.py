@@ -1,4 +1,4 @@
-#No error
+#No error(with MP4 file only)
 import numpy as np
 import cv2
 
