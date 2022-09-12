@@ -1,22 +1,32 @@
-#No error
+#With live Picamera
+import time
+from picamera import PiCamera
+from time import sleep
 import numpy as np
 import cv2
 
-capture = cv2.VideoCapture("example.mp4")
+#camera setting
+    camera = picamera.PiCamer()
+    camera.resolution = (320, 240)
+    camera.framerate = 24
+    time.sleep(2)
+    
 
 while True:
-    ret, frame = capture.read()
+    #camera setting
+    camera = picamera.PiCamera()
+    camera.resolution = (320, 240)
+    camera.framerate = 24
+    time.sleep(2)
+    
+    #capture from live Picamera, can scale to gray-scale
+    camera.capture(capt, 'bgr')
     
     #Gaussian blur to simplify calculation
     kernel_size = 5
-    frame = cv2.GaussianBlur(frame, (kernel_size,kernel_size),0)
+    frame = cv2.GaussianBlur(frame,(kernel_size,kernel_size),0)
     
     #exception handling
-    if frame is None:
-        print("capture load failed")
-        sys.exit()    
-    
-    #if functioning normally
     if ret == True:
         
         #convert frame file to gray scale & dsiplay through window
