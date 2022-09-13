@@ -11,7 +11,7 @@ while True:
     camera = picamera.PiCamera()
     camera.resolution = (320, 240)
     camera.framerate = 24   #24 FPS
-    time.sleep(2)
+    time.sleep(2)   #necessary to wait 2 secs at least
     
     #capture from live Picamera, can scale to gray-scale
     camera.capture(capt, 'bgr')
