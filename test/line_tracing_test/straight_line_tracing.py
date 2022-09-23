@@ -4,6 +4,7 @@ import cv2
 
 capture = cv2.VideoCapture("example.mp4")
 
+
 while True:
     ret, frame = capture.read()
     
